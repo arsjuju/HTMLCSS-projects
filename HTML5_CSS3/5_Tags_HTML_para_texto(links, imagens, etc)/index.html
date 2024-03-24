@@ -1,0 +1,89 @@
+<!--Todas as tags HTML:https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu HTML</title>
+
+    <style>
+        .vermelho {
+            font-size: 24pz;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Essas tags geralmente contém outras tags(h1, p)-->
+    <h1 style="background: red;">Cabeçalho</h1> <!--Toda tag html pode receber um atrbuto style, onde recebe o css-->
+    <h1>Cabeçalho</h1>
+    <!--Semântica: Você usar a tag certa no local correto para que todo mundo que leia o seu site consiga entender(leitores de tela, etc)-->
+    <p> <b>Lorem</b><!--b: Tag de Negrito-->
+        <strong>ipsum</strong><!--Tag semântica, ela foi feita para colocar uma palavra no texto mais forte(para deficientes)-->
+        <i>dolor</i><!--i: Tag de itálico-->
+        <em>sit</em><!--Tag semântica, para dar enfâse-->
+
+        <!--a: Tag de link-->
+        <!--target: um atributo com valor _blank abre o documento vinculado em uma nova aba, 
+        já com o valor _self abre o documento vinculado no mesmo frame clicado-->
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/strong" target="_blank">amet</a>
+
+        <!--Imagem com link externo-->
+        <!--alt: semântico, texto alternativo para definir a imagem-->
+        <!--width: largura da imagem-->
+        <!--height> altura da imagem-->
+        <img src="https://static.vecteezy.com/ti/vecteur-libre/p3/9122447-mdn-logo-mdn-letter-mdn-letter-logo-design-initials-mdn-logo-linked-with-circle-and-uppercase-monogram-logo-mdn-typography-for-technology-business-and-real-marque-immobilier-vectoriel.jpg"
+            alt="logo da mdn, fundo preto e letras brancas escrito mdn" width="50" height="44">
+
+        <!--Também é possível linkar o link com a imagem.-->
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/strong" target="_blank">amet
+            <img src="https://static.vecteezy.com/ti/vecteur-libre/p3/9122447-mdn-logo-mdn-letter-mdn-letter-logo-design-initials-mdn-logo-linked-with-circle-and-uppercase-monogram-logo-mdn-typography-for-technology-business-and-real-marque-immobilier-vectoriel.jpg"
+                alt="logo da mdn, fundo preto e letras brancas escrito mdn" width="50" height="44"></a>
+
+        <del>consectetur</del><!--del: tag semântica para representar uma parte que foi excluida, uma errata-->
+        <ins>adipisicing</ins><!--ins: tag semântica para insetir algo, quando a tag del determina que o texto não é mais válido-->
+        <s>elit.</s><!--s: tag para colocar o risco no texto-->
+        <u>Doloribus</u><!--u: tag para colocar o underline no texto-->
+        <small>eaaeae</small><!--small: tag para deixar o texto menor-->
+        architecto<sup>oi</sup><!--sup: tag para elevar algo-->
+        incidunt<sub>oi</sub><!--sub: tag para descer algo-->
+        accusamus<br><!--br: tag de quebra de linha-->
+        <q cite="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/q">exiure</q><!--q: tag de citação-->
+        cupiditate itaque nobis explicabo dignissimos. Deserunt illo sapiente expedita nulla reprehenderit optio quis
+        consequatur? Nulla.
+    </p>
+    <hr><!--hr: tag para fazer uma linha-->
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus ea architecto incidunt accusamus ex iure
+        cupiditate itaque nobis explicabo dignissimos. Deserunt illo sapiente expedita nulla reprehenderit optio quis
+        consequatur? Nulla.</p>
+
+    <code>console.log</code><!--code: tag para código-->
+
+    <!--Tag para uso fora do parágrafo-->
+    <blockquote cite="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/q">
+        <p>Aqui sim eu estou fazendo um bloco de
+            citação</p>
+    </blockquote><!--Citação-->
+
+    <pre><!--tag de texto pré formatado-->
+        <code>
+            let soma = 0;
+            if (numero) {
+                soma += numero;
+            }
+        </code>
+    </pre>
+
+    <p><span class="vermelho"><!--container genérico, o span é um container IN LINE-->
+            lorem ipsu, ns ie o qu asodiaodiaod nao sei oq nao seiqla
+        </span></p>
+
+    <div class="vermelho"><!--container genérico-->
+        Eu sou um bloco.
+    </div>
+</body>
+
+
+</html>

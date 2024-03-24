@@ -1,0 +1,16 @@
+ * {
+     margin: 0;
+     padding: 0;
+ }
+
+ /*Existem diversas formas de dar cor ao css, pode ser pelo nome, pelo hexadecimal, ou o rgb*/
+ /*Site pra cores hexa: https://corhexa.com/ 
+ https://htmlcolorcodes.com/ 
+ https://coolors.co/ */
+
+ .grid {
+     /*HexaDecimal: ABCDEF123456789*/
+     background-color: rgb(128, 27, 27);
+     /*Existem também o rgba, o "a" 
+     sendo o alfa, que funciona como a opacidade*/
+ }

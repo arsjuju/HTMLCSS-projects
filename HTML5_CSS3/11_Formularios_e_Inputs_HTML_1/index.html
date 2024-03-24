@@ -1,0 +1,133 @@
+<!--Html input types: https://www.w3schools.com/html/html_form_input_types.asp -->
+<!--Como estruturar um formulário: https://developer.mozilla.org/pt-BR/docs/Learn/Forms/How_to_structure_a_web_form -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: sans-serif
+        }
+
+        label {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Tag de formulário HTML-->
+    <!--action: para onde vai ser mandado o formulário-->
+    <!--method: basicamente se a informação do formulários vai aparecer na url ou não-->
+    <!--target: se o formulário vai abrir uma nova aba ou só recarregar na msm-->
+    <!--autocomplete: nao fique dizendo coisas já digitadas anteriormente no formulário-->
+    <form action="#" method="get" target="_blank" autocomplete="off" required>
+        <p>O meu formulário</p>
+        <p>
+            <!--required: obrigatorio ter algum valor no campo do formulário-->
+            <!--disabled: o usuário não consegue interagir-->
+            <!--readonly: o usuário pode interagir mas não pode editar o valor-->
+            <!--placeholder: indica o que é o campo-->
+            <!--value: é o que vai chegar no servidor-->
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required><br>
+
+            <label for="dev">Sou um dev:</label>
+            <!--checked: vem marcado por padrão-->
+            <input type="checkbox" id="dev" name="dev" value="sim" checked><br>
+
+            <label for="dev">Sou um dev:</label>
+            <input type="checkbox" id="dev" name="dev" value="sim" checked><br>
+
+            <label for="dev">Sou um dev:</label>
+            <input type="checkbox" id="dev" name="dev" value="sim" checked><br>
+
+            <!--É agrupado pelo name-->
+            <label for="feminino">Feminino:</label>
+            <input type="radio" id="feminino" name="sexo" checked><br>
+
+            <label for="masculino">Masculino:</label>
+            <input type="radio" id="masculino" name="sexo"><br>
+
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" value="2020-04-20"><br>
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="dataehora" name="dataehora" value="20:00"><br>
+
+            <label for="dataehora">Data e Hora:</label>
+            <input type="datetime-local" id="datahora" name="datahora" value="2020-04-20T20:00"><br>
+        </p>
+
+        <p>
+            <label for="cor">Cor Preferida:: </label>
+            <input type="color" id="cor" name="cor" value="#003d66">
+        </p>
+
+        <p>
+            <label for="email">Seu Email: </label>
+            <input type="email" id="email" name="email" required placeholder="ex.: email@email.com">
+        </p>
+
+        <p>
+            <label for="senha">Sua Senha: </label>
+            <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
+        </p>
+
+        <p>
+            <label for="foto">Sua Foto: </label>
+            <!--accept: tipo de arquivo que pode ser enviado-->
+            <!--multiple: multiplos arquivos podem ser selecionados-->
+            <input type="file" id="foto" name="foto" accept=".png, .svg" multiple>
+        </p>
+
+        <p>
+            <label for="numero">Número: </label>
+            <input type="number" id="numero" name="numero" placeholder="Digite um número" min="10" max="50" step="5">
+        </p>
+
+        <p>
+            <label for="range">Range: </label>
+            <input type="range" id="range" name="range" min="0" max="50" step="5">
+        </p>
+
+        <p>
+            <label for="url">Sua Url: </label>
+            <input type="url" id="url" name="url" placeholder="url">
+        </p>
+
+        <!--Somente semântica-->
+        <p>
+            <label for="search">Sua Pesquisa: </label>
+            <input type="search" id="search" name="search" placeholder="Pesquisa">
+        </p>
+
+        <p>
+            <label for="select">Selecione alguma opção: </label>
+            <select id="select" name="select">
+                <option value="qualquer coisa" Label="label 1">Valor</option>
+                <option value="qualquer coisa2" Label="label 2">Valor</option>
+                <option value="qualquer coisa3" Label="label 3">Valor</option>
+            </select>
+
+        <p>
+            <label for="texarea">Area do texto: </label>
+            <textarea name="textarea" id="textarea" rows="3" cols="9">tudo pelo jogo easter egg</textarea>
+        </p>
+
+        </p>
+
+        <p>
+            <!--Tag de botão-->
+            <button type="submit"> Enviar </button>
+            <button type="reset"> Resetar </button>
+        </p>
+        </p>
+    </form>
+</body>
+
+</html>

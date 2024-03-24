@@ -1,0 +1,19 @@
+/*Tudo dentro do body herda as propriedades dele*/
+body {
+    color: red;
+    font-family: sans-serif;
+}
+
+/*Mesmo pegando o id tudo dentro da div vai herdar as propriedades dela*/
+#text {
+    color: blue;
+    font-size: 40px;
+}
+
+/*Você pode desativar a herança*/
+p {
+    /*não herda*/
+    font-size: initial;
+    /*vai herdar*/
+    color: inherit;
+}

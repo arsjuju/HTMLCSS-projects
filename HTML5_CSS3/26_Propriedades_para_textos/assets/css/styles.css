@@ -1,0 +1,53 @@
+p {
+    /*Propriedade que trabalha as cores do texto*/
+    color: red;
+    background-color: yellow;
+    /*Também pode-se falar o tamanho e o estilo do texto*/
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    /*Pode-se mudar a direção do texto
+    ltr: esquerda para a direita
+    rtl: direita para a esquerda*/
+    direction: ltr;
+    /*Também te o espaçamento entre as letras ou as palavras
+    letter-spacing: espaçamento entre as letras
+    word-spacing: espaçamento entre as palavras*/
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    /*Além disso pode-se falar a altura da linha que a gente quer
+    line-height*/
+    line-height: 25px;
+    /*Pode-se alinhar o texto na direição que a gente quiser
+    text-align center, alinha no centro
+    text-align right, alinha à direita
+    text-align left, alinha à direita*/
+    text-align: left;
+    /*Além disso também pode-se utilizar a decoração no texto*/
+    /*Deixa o texto riscado*/
+    text-decoration: line-through;
+    /*A linha fica encima do texto*/
+    text-decoration: overline;
+    /*A linha fica abaixo do texto*/
+    text-decoration: underline;
+    /*É possível colocar mais de 1 decoração exemplo:*/
+    text-decoration: overline underline line-through;
+    /*Também é possível colocar indentação no texto, nos parágrafos*/
+    text-indent: 50px;
+    /*Também é possível colocar sombra no texto*/
+    /*Colocando apenas 2px significa que o texto andou da esquerda pra direita, se por acaso colocarmos -2, vai andar da direita pra esquerda exemplos:*/
+    text-shadow: 2px;
+    text-shadow: -2px;
+    /*Agora para mover o texto para baixo ou para cima é o segundo valor, ou seja colocamos 3px pra descer o texto e -3px pra subir o texto*/
+    text-shadow: 2px 3px;
+    text-shadow: 2px -3px;
+    /*Também é possível esfumaçar os texto, ou seja o texto foi esfumaçado em 2 pixeis, e por último a cor da sombra*/
+    text-shadow: 2px 3px 5px red;
+    /*Também é possível transformar o texto todo em maiúsculo ou todo em minúsculo.
+    uppercase: maiúsculo
+    lower case: minúsculo
+    capitalize: 1 letra maiúscula em cada palavra*/
+    text-transform: uppercase;
+    text-transform: lowercase;
+    text-transform: capitalize;
+}

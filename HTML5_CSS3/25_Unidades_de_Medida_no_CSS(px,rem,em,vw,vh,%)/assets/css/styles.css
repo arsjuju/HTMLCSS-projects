@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.pai {
+    /*Das unidades absolutas, px é a mais usada e praticamente a única usada de todas.*/
+    /*Essa unidade é absoluta (px), ou seja o parágrafo não está se baseando em nada para colocar a fonte em 20px*/
+    height: 30px;
+    /*vw: significa 1% da largura do viewport, se é 1%, eu posso ir de 0 a 100 da largura do viewport*/
+    width: 100vw;
+    /*vh: significa 1% da altura do viewport, se é 1%, eu posso ir de 0 a 100 de altura do viewport*/
+    height: 100vh;
+    background-color: yellow;
+    /*Falando sobre vmin e vmax, é a mesma coisa do vw e vh vistos anteriormente, mas o vmin é relativo a menor parte do viewport, já o vmax é sobre a maior parte do viewport*/
+
+}
+
+/*Para que o usuários consiga manipular o tamanho que ele quer que sejam as coisas, é necessário utilizar as medida relativas, ao invés de usar algo como 50px, usa-se o rem*/
+html {
+    font-size: 62.5%;
+    /*A propriedade css scroll-behavior especifica o comportamento de rolagem para uma caixa de scrolling*/
+    scroll-behavior: smooth;
+}
+
+p {
+    /*As unidades medida relativas, funcionam baseadas em outra coisa*/
+    /*em: faz com que o elemento se comporte baseando-se em um outro elemento pai, o elemento pai mais próximo dele. Funciona de certa forma como a multiplicação, exemplo: 
+    50x1 = 50, ou seja como temos 1em, vão ser aplicados os 50px da classe pai.*/
+    font-size: 1em;
+    /*rem: se baseia no elemento root do documento, o elemento root é o html*/
+    font-size: 1rem;
+}

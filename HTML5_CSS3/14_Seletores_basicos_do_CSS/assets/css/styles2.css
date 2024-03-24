@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*adjacent sibling selector (Para 1 elemento que tem a classe pai, você
+seleciona o único p após o h1
+.pai h1+p {
+    color: red;
+}*/
+
+/*general sinbling selector (Todos os elementos depos do h1 vão ser selecionados*/
+.pai h1~p {
+    color: red;
+}
+
+/*Também é possível selecionar atributos*/
+[meu-atributo="valor"] {
+    color: red;
+}
+
+[checked] {
+    width: 50px;
+    height: 50px;
+}
+
+/*Dá pra selecionar de forma mais específica pelo valor, ou seja se o atributo
+tiver mais de 1 valor usa-se o ~*/
+[meu-atributo~="valor1"] {
+    color: red;
+}
+
+/*O seletor | requer que a palavra seja seguida de um - exemplo: valor-a*/
+[meu-atributo|="valor-a"] {
+    color: red;
+}
+
+/*O seletor ^ já seleciona se o seu atributo começa com aquilo*/
+/*olhando no index, o primeiro valor é o comecou ou seja isso fez com que ele fosse selecionado*/
+[meu-atributo^="comecou"] {
+    color: red;
+}
+
+/*O seletor * seleciona o atributo se contém tal coisa nele*/
+/*Se tiver o l no valor já vai ser selecionado*/
+[meu-atributo*="l"] {
+    color: red;
+}

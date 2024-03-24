@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt=br>
+<head>
+    <meta charset=" UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        background-color: red;
+        height: 50px;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding: 10px 20px;
+        display: block;
+        text-transform: uppercase;
+
+    }
+
+    /* possibilita ter o estilo alterado através da ação do usuário quando ele passa o cursos por cima do elemento*/
+    nav a:hover {
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+    }
+
+    nav ul {
+        /*Tirar a bolinha da lista*/
+        list-style: none;
+        display: flex;
+
+    }
+</style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li> <a href="#">Home</a></li>
+            <li> <a href="#">About</a></li>
+            <li> <a href="#">Products</a></li>
+        </ul>
+    </nav>
+    <!--Lista não-ordenada-->
+    <ul>
+        <li>Item 2</li><!--List items-->
+        <li>Item 1</li>
+        <li>Item 3</li>
+    </ul>
+    <!--Lista ordenada-->
+    <ol>
+        <li>Item 2</li><!--List items-->
+        <li>Item 1</li>
+        <li>Item 3</li>
+    </ol>
+    <!--Listas de termos com a descrição de cada-->
+    <dl>
+        <dt>Café</dt>
+        <dd>Bebida preta e quente</dd>
+        <dt>Refrigerante</dt>
+        <dd>Bebida Gasosa</dd>
+    </dl>
+
+    <!--Elementos inLine é somente o conteúdo dele, um elemento 
+        display block empurra os elementos para todo espaço que ele está usando-->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fugiat, minus accusantium aliquam harum
+        reiciendis <a style="padding: 20px 0; background-color: red; display: block;" href="#">accusamus </a>, voluptas
+        qui, recusandae
+        error ut repellendus magni delectus perferendis
+        odit! Excepturi
+        repellat provident hic.</p>
+</body>
+
+</html>

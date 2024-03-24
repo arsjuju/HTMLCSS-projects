@@ -1,0 +1,46 @@
+/*Pseudo-elementos são com 2 :: */
+
+/*after: Depois do conteúdo do elemento se coloca alguma coisa, esse conteúdo não tá na página um pseudo-elemento foi criado*/
+
+ul li::after {
+    content: ' - ';
+    background: red;
+    color: #fff;
+    display: block;
+}
+
+/*before: Antes do conteúdo do elemento se coloca alguma coisa*/
+ul li::before {
+    content: ' - ';
+    background: red;
+    color: #fff;
+    display: block;
+}
+
+p {
+    font-size: 24px;
+}
+
+/*A primeira letra vai ser configurada*/
+p::first-letter {
+    font-size: 150px;
+    display: block;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+/*A primeira linha vai ser configurada*/
+p::first-line {
+    background-color: red;
+}
+
+/*O que for selecionado vai mudar*/
+p::selection {
+    background-color: black;
+    color: white;
+}
+
+/*Manipula só o place holder*/
+.form-field::placeholder {
+    color: red;
+}

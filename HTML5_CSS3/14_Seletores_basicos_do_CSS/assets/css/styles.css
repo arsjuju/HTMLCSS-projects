@@ -1,0 +1,54 @@
+/*Continua no styles2*/
+
+/*Seletor all ou seja seleciona todos os elementos da página*/
+* {
+    /*Geralmente é usado pra zerar o css, ou seja deixa a margem e o espaçamento no 0*/
+    margin: 0;
+    padding: 0;
+}
+
+/* h1,
+p {
+    color: purple;
+}
+
+/*Pode ser selecionado algo muito específico, como por exemplo todo o caminho
+Ou vários elementos que estão no mesmo local por exemplo: ambos p e h1 estão dentro de section
+body div section p,
+body div section h1 {
+    color: red;
+} */
+
+/*Seleção por classe*/
+
+.color-red {
+    color: red;
+}
+
+/*Você pode ter uma classe mãe e usar para afetar algo mais específico dentro dessa classe*/
+.main-content h2.heading {
+    font-style: italic;
+    color: red;
+}
+
+/*Ocorre uma herança*/
+.pai {
+    color: red;
+}
+
+/*Essa herança só acontece porque a configuração da div padrão
+no navegador está como inherit
+
+div {
+    color: inherit;
+}
+
+Mas se for usado:
+div {
+    color: initial;   
+} Não sofrerá alterações*/
+
+/*Seleção de dependente*/
+.pai>.filha>.filha {
+    color: red;
+}

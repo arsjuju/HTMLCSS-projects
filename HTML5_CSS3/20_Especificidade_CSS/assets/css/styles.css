@@ -1,0 +1,35 @@
+/*Quando existe um empate de especificidade o que prevalece é a última regra colocada*/
+
+/*style(não é mais usado porém tem a maior especificidade) ID (é usado e tem a maior especificidade) Assim segue respectivamente: Classes, atributos e pseudo-classes, elementos e pseudo-elementos
+
+!important(subscreva todas as outras regras não é recomendado usar)*/
+
+/*Selecionando Id (Selector Specifity(1,0,0), olhando como um número comum seria = 100*/
+#p {
+    background-color: red;
+}
+
+/*Especificidade (0,1,0) = 10*/
+.p {
+    background-color: yellow;
+}
+
+/*Usando o id e a class seria 100 + 10 = 110 ou seja a especificidade passou a do ID*/
+#p.p {
+    background-color: yellow;
+}
+
+/*Para passar o anterior foi usado o elemento o id e a classe ou seja 1 + 100 + 10 = 111*/
+p#p.p {
+    background-color: red;
+}
+
+/*Agora tem 2 ids aqui então 100 + 1 + 100+ 10 = 211*/
+#b p#p.p {
+    background-color: blue;
+}
+
+/*Com o body e o elemento passa a especifidade do anterior 1+ 100 + 1 + 100+ 10 + 1*/
+body#b p#p.p::selection {
+    background-color: purple;
+}

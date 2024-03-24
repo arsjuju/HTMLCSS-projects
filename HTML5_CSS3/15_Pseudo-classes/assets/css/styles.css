@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.heading {
+    transition: all 300ms ease-in-out;
+}
+
+/*A pseudo-classe vem após os : */
+/*hover funciona quando se passa um mouse sobre o elemento*/
+.heading:hover {
+    background: red;
+}
+
+a {
+    color: darkorange;
+}
+
+/*Links nunca visitados*/
+a:link {
+    color: deeppink;
+}
+
+/*links que foram visitados*/
+a:visited {
+    color: firebrick;
+}
+
+/*Todos os links que estão clicados*/
+a:active {
+    background: darkslategray;
+    color: white;
+    text-decoration: none;
+}
+
+/*todo input que tá em foco ou seja clicado*/
+input:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    outline: none;
+    border: 1px solid black;
+}
+
+input:disabled {
+    background: rebeccapurple;
+    cursor: not-allowed;
+}
+
+input:checked+p {
+    background: red;
+}
+
+.pai .lista li:first-child {
+    background: red;
+}
+
+input:required {
+    background-color: red;
+}

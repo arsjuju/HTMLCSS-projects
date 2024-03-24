@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Toda div, todo elemento para separação de conteúdo vem por padrão com o display:block*/
+
+/*Um container de flex-blox também utiliza a propriedade de display mas é o display flex, o container em si se comporta da mesma maneira, como um elemento display block, mas os filhos desse container que vão ser afetados pelo display flex*/
+
+/*Quando foi configurado display flex, você recebe algumas configurações como:
+
+flex-direction: row (indica a direção do eixo principal do flex)
+
+justify-content: flex-start
+
+align-items: stretch*/
+
+
+/*IMPORTANTE!!!
+
+justify-content: eixo principal;
+
+align-items: eixo perpendicular. Ou seja tem como alinhar os items no eixo principal ou o perpendicular.*/
+
+
+.flex-container {
+    /*além do display flex, também existe o inline-flex*/
+    display: flex;
+
+    /*flex-direction: row-reverse: significa que ele pega a ordem que já está no html e reverter essa ordem*/
+
+    /*flex-direction: column-reverse: significa que ele pega a ordem que está no html e reverte a ordem das colunas*/
+    flex-direction: row;
+
+    /*justify-content: flex-start: os elementos vão se alinhar no início do eixo pincipal*/
+
+    /*justify-content: flex-end: os elementos vão se alinhar ao final do eixo principal*/
+
+    /*justify-content:center: ele vai se alinhar ao centro do eixo principal*/
+
+    /*justify-content: space-around: espaços iguais entre todos os elementos*/
+
+    /*justify-content: space-between: espaço disponivel entre cada um dos elementos, sem incluir as bordas*/
+
+    /*justify-content: space-evelyn: espaço igual para todos*/
+    justify-content: flex-start;
+
+    /*align-items:center: o elemento fica no centro da página*/
+
+    /*align-items: flex-start: o elemento se alinha no início do container*/
+
+    /*align-items: flex-end: o elemento se alinha no fim do container*/
+
+    /*align-items: baseline: todos eles vão ficar alinhados na baseline de todas a fontes*/
+
+    /*align-items: stretch: que estica os elementos até a altura do conteúdo principal*/
+    align-items: center;
+    /*se eu uso o wrap significa que agora os elementos vão passar a ocupar 100% da tela, porque agora eu permiti que o flex quebrasse a linha, ou seja se não tiver mais espaço o elemento vai quebrar a linha*/
+    flex-wrap: wrap;
+
+    /*o align-items pega os items e a linha, já o align content, pega o conteúdo e a linha, vão ser aplicados as mesma propriedades do align-items, como o flex-start, center e etc*/
+    align-content: center;
+    background-color: yellow;
+    height: 640px;
+    width: 960px;
+}
+
+.flex-item {
+    /*flex-grow: vai pegar o espaço que sobrou e vai dividir o espaço entre cada um dos conteúdos, e jogar esse espaço para os conteúdos
+    
+    flex-grow: 1;
+
+    /*flex-basis:o espaço primeiro será dividido em 320px para cada elemento, mas após isso eles podem se ajustar e acomodar como desejarem
+
+    flex-basis: 320px;
+
+    /*flex-shrink: você não permite mais que o elemento diminua, ele vai aumentar com o flex-grow mas não vai se diminuir
+
+    flex-shrink: 0;
+    */
+
+    /*o atalho para esses 3 comando é o flex, então a ordem é: grow, shrink e basis*/
+    flex: 1 0 320px;
+    color: #fff;
+    width: 32%;
+    margin-bottom: 2px;
+    height: 200px;
+    background-color: red;
+}
+
+/*order: realinha a ordem dos elementos, por padrão os elementos tem a ordem de 0*/
+
+.flex-item:nth-child(1) {
+    order: -3;
+}
+
+.flex-item:nth-child(2) {
+    order: -4;
+}
+
+.flex-item:nth-child(3) {
+    order: -2;
+}
+
+.flex-item:nth-child(4) {
+    order: -1;
+}

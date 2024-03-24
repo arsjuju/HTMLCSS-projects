@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.filha1,
+.filha2,
+.filha3 {
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    margin: 10px;
+    /*Os elementos por padrão no navegador já vem com uma posição, ela é a static*/
+    position: static;
+}
+
+.filha2 {
+    /*fixed: tudo vai funcionar do mesmo jeito como a absolute, a única coisa que vai mudar é que o elemento vai ficar fixo na página independente do rolamento, assim como menus e afins.*/
+    position: fixed;
+    background-color: greenyellow;
+    float: left;
+    /*z-index: é como se você alterasse a camada do elemento, usando o absolute nessa camada, ele ultrapassou a filha 1,para reajustar as camadas pode-se usar o z-index, é possível usar números negativos para colocar o elemento abaixo dos outros*/
+    z-index: 1;
+}
+
+.filha1 {
+    /*As seguintes alteração não vão proporcionar nenhuma mudança devido a position dos elementos estarem static, para esse elemento sair dessa posição existem algumas possibilidades, exemplo: */
+    /*a position relative: além de habilitar a possibilidade de usar top, left, right e bottom, você ainda pode fazer esse elemento ter uma posição relativa em relação a outros elementos*/
+    position: relative;
+    /*positon absolute: é como se mudasse o elemento de camada, como se o outro elemento não existisse na página, ou seja uma posição absoluta em relação a determinadas coisas, ela ignorou que existia outra div ali.*/
+    position: absolute;
+    /*top: é em relação ao topo da página, ou seja vai descer n pixeis a partir do topo*/
+    top: 50px;
+    /*left: a partir da esquerda o elemento vai se mexer n pixeis*/
+    left: 50px;
+    /*right: a partir da esquerda o elemento vai se mexer n pixeis*/
+    right: 50px;
+    /*bottom: a partir de baixo do navegador ele vai subir n pixeis*/
+    z-index: 2;
+
+}
+
+.filha3 {
+    background: blue;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
+.outra {
+    /*mesmo esse elemento estado em posite absolute, ele está respeitando a relatividade que o outro elemento tem, ou seja ele não sofre nenhuma alteração, mesmo que seja top, left, ele vai se comportar somente dentro deste elemento.*/
+    position: absolute;
+    font-size: 50px;
+    background-color: #fff;
+    top: 50px;
+    left: 0;
+
+}
+
+ul {
+    height: 100px;
+    overflow: auto;
+
+}
+
+ul li.sticky {
+    /*Vai funcionar como se o primeiro elemento ficasse preso com a gente até outro determinado elemento, só funciona com a barra de rolagem*/
+    position: sticky;
+    background-color: gray;
+    top: 0;
+}

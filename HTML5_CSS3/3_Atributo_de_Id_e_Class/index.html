@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--Dentro da tag você pode colocar atributos-->
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu HTML</title>
+    <!--Onde se coloca o css dentro do html-->
+    <style>
+        /*Selecionando não o id nem a class, mas a tag h1*/
+        h1 {
+            background: red;
+        }
+
+        /*Aquilo que vem depois prevalece*/
+        p {
+
+            background: blue;
+        }
+
+        /*Para chamar o id usa-se #*/
+        #cabecalho-dois {
+            background: purple;
+        }
+
+        /*Para chamar a class usa-se .*/
+        .fundo-vermelho {
+            /*Mesmo colocando depois não mudou porque o id tem maior especificidade*/
+            background: red;
+        }
+
+        .bold {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="cabecalho-um" class="fundo-vermelho borde-esquerda"><!--Id: identificador da tag, ele é único-->
+        Vai vir aqui
+    </h1><!--Class: Diferente do id, pode se repetir e pode se colocar mais de uma-->
+    <h1 id="cabecalho-dois" class="fundo-vermelho">
+        Vai vir aqui
+    </h1>
+    <p>Um texto <b class="bold">qualquer.</b></p>
+    <p>Um texto <b class="bold">qualquer.</b></p>
+    <p>Um texto <b class="bold">qualquer.</b></p>
+    <p>Um texto <b class="bold">qualquer.</b></p>
+    <p>Um texto <b class="bold">qualquer.</b></p>
+</body>
+
+</html>

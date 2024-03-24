@@ -1,0 +1,29 @@
+/* https://developer.mozilla.org/pt-BR/docs/Web/CSS/box-sizing */
+
+/*Existem vários tipos de display*/
+.texto {
+    /*display block é o padrão ou seja ela é um bloco, qualquqer tamanho e afins que for passado vai alterar ela*/
+    display: block;
+    background-color: red;
+    width: 50%;
+    /*a proprieda IN LINE não pega nenhuma configuração(propriedade, como background width e etc), o navegador entende que é pra ser continuado como uma linha.*/
+    display: inline;
+    /*Se o conteúdo não encaixar na div, ele vai passar pra fora, para esconder isso pode-se usar o overflow*/
+    /*O conteúdo fica escondido*/
+    overflow: hidden;
+    /*Agora tem uma barra que pode ser usada para ver todo o conteúdo*/
+    overflow: scroll;
+    /*Já com o auto, a barrinha só vai aparece se o conteúdo passar*/
+    overflow: auto;
+
+    /*Propriedades do box-model que controlam o conteúdo*/
+    width: 50;
+    height: 50;
+    /*Existe a propriedade max e min, ou seja max-width ou min-widht*/
+    /*faz com que o conteúdo se alinhe automaticamento ao meio da tela*/
+    margin: 0 auto;
+    /*padding é o enchimento do conteúdo, quando aplicado todos os lados terão 50px pra dentro*/
+    padding: 50px;
+    /*box-sizing: padding-box, o padding vai passar a ser acrescendo pra dentro */
+    /*box-sizing: border-box o border, toda vez que você falar sobre largura e altura, você vai estar falando sobre margin e borda*/
+}

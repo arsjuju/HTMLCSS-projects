@@ -1,0 +1,13 @@
+p {
+    color: blue;
+}
+
+/*Seleciona todos os parágrafos menos o que tem a classe meio*/
+p:not(.meio) {
+    color: blue;
+}
+
+/*Quando o input não estiver checado e tiver um p logo depois dele, esse p vai ter o fundo amarelo*/
+input:not(:checked)+p {
+    background: yellow;
+}

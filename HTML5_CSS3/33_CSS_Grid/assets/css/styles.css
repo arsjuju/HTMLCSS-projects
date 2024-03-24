@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 40px;
+}
+
+.grid {
+    /*Se eu tenho uma grid, significa que eu tenho uma grande, ou seja e tenho linhas e colunas.*/
+    display: grid;
+    /*grid-template-columns: Aqui pode-se passar o tamanho das colunas em ordem, ou seja temos pra primera coluna 50% e pra segunda coluna também 50%*/
+    /*uma forma de dividir o tamanho das colunas também é com o fr, que significa 1 fragmento, e isso possibilita a divisão por igual
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    /*uma forma mais prática de definir todos os fragmentos é usando o repeat, que segue primeiro a quantidade de vezes que vai ser repetido e logo após oq precisa ser repetido*/
+
+    /*grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));" esse comando vai tentar encaixar a nossa coluna ou no mínimo que é 320px ou no máximo que é um fragmento inteiro, e com isso não ocorre o overflow e sim a quebra de linha da coluna, é um design responsivo criado com apenas 1 linha*/
+    grid-template-columns: repeat(10, 1fr);
+
+    /*também é possível trabalhar nas linhas da coluna, todas as coisas feitas com o columns, pode-se fazer com as rows, geralmente não é necessário mexer nas rows*/
+    /*também é possível nomear e então pode-se utilizar esses nomes também*/
+    grid-template-rows: [um]1fr [dois]1fr [tres]1fr;
+    /*gap: espaçamento entre as grids*/
+    gap: 30px;
+}
+
+.grid div {
+    background-color: tomato;
+    min-height: 100px;
+}
+
+.grid div:nth-child(5),
+.grid div:nth-child(6) {
+    /*A grid vai começar na coluna 2 e terminar na coluna 4*/
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background-color: darkred;
+    grid-row-start: 6;
+    /*Ao invés de usar tudo isso, podemos aplicar apenas o span que é bem mais interessante*/
+    /*Ela vai ocupar 2 linhas*/
+    grid-row: span 2;
+    /*Ela vai ocupar 2 colunas*/
+
+    /*E assim pode-se dizer que ela começa na um e termina na quatro
+    grid-column-start: um;
+    grid-column-end: quatro;*/
+    /*Uma forma de atalho é apenas grid-column, porém é necessário ter a / pois faz parte da sintaxe
+    grid-column: um / quatro;
+    grid-column: span 2 / span 2;
+    grid-row: um / quatro;*/
+
+    /*Além disso existe um outro comando de atalho pra coluna e linha, start e end que é o grid area e a ordem é:
+    linha que inicia, coluna que inicia,
+    linha que termina, coluna que termina*/
+    grid-area: um / um / quatro / quatro;
+}
+
+@media (max-width: 768px) {
+    .grid div:nth-child(5) {
+        grid-column: span 1;
+    }
+}

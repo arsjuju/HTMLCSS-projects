@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.grid {
+    max-width: 1200px;
+    padding: 15px;
+    margin: 0 auto;
+    padding-top: 73px;
+}
+
+.grid::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.grid .col {
+    height: 300px;
+    float: left;
+    padding: 15px;
+}
+
+.grid .col-content {
+    width: 100%;
+    height: 100%;
+    background: red;
+}
+
+.menu {
+    width: 100%;
+    position: fixed;
+    background: black;
+}
+
+.menu ul {
+    list-style: none;
+    display: block;
+    max-width: 1200px;
+    padding: 0 30px;
+    margin: 0 auto;
+
+}
+
+.menu ul li {
+    float: left;
+}
+
+.menu ul li a {
+    display: block;
+    color: #fff;
+    padding: 20px;
+    text-decoration: none;
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover {
+    background-color: #333;
+}
+
+.full-page {
+    max-width: 100%;
+    padding: 30px;
+    margin: 0 auto;
+    padding-top: 73px;
+    height: 100vh;
+    background-color: turquoise;
+}
+
+.full-page-content {
+    max-width: 1200px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+/*media queries permitem que o estilo do elemento seja alterado com base em certas características do dispositivo que está sendo exibido, por exemplo temos 3 colunas, mas dependendo do tamanho do dispositivo, as colunas vão começar a ter o conteúdo quase impossível de se ler, para isso usamos as media queries*/
+
+/*se a largura máxima do dispositvo for 320px, vem o css aí dentro, e o css que for colocado dentro vai ser usado para sobescrever o que já foi definido acima*/
+
+@media all and (max-width: 568px) {
+
+    /*Isso que vai ser aplicado, só vai ser aplicado quando a condição for verdadeira, ou seja quando a largura máxima for 320px*/
+    .grid .col {
+        width: 100%;
+    }
+}
+
+/*Já temos uma regra de 320px, então a regra seguinte a ser aplicada será de 321 até 768*/
+
+@media all and (min-width: 569) and (max-width:768px) {
+    .grid .col {
+        width: 50%;
+    }
+}
+
+/*Agora acima de 769 até 1200px*/
+@media all and (min-width: 729px) and (max-width:1200px) {
+    .grid .col {
+        width: 50%;
+    }
+}
+
+/*Agora acima 1200px sem um end ou seja qlqer tela maior que 1200px vai ser 4 colunas*/
+@media all and (min-width: 1200px) {
+    .grid .col {
+        width: 25%;
+    }
+}

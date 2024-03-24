@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*Seleciona tudo no css*/
+        * {
+            /*Definem uma distância entre o conteúdo e as bordas*/
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url(https://isquad.tv/wp-content/uploads/2018/08/Netflix-Background.jpg);
+            background-size: cover;
+            background-position: top center;
+        }
+
+        #heading {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        #heading .div1 {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+
+        #heading .h1 {
+            padding: 15px;
+            font-size 20px;
+            text-transform: uppercase;
+        }
+
+        #heading a {
+            color: white;
+            text-decoration: none;
+            font-family: sans-serif;
+        }
+
+        #heading .div2 {
+            display: flex;
+            margin-top: 10px;
+            margin-right: 3px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="heading">
+        <div class="div1">
+            <h1 class="h1">
+                <a href="#">Netflix</a>
+            </h1>
+            <div class="div2" style="background: red;">
+                <h2 class="h1">
+                    <a href="#">Netflix</a>
+                </h2>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>
